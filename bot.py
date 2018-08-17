@@ -20,7 +20,7 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
     async def on_ready(self):
         print("ready")
 
-        @commands.command(pass_context=True, hidden=True, name='eval')
+    @commands.command(pass_context=True, hidden=True, name='eval')
     async def _eval(self, ctx, *, body: str, edit=False):
         """Evaluates python code"""
 
