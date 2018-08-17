@@ -1,4 +1,4 @@
-import discord, inspect
+import discord, inspect, io
 from discord.ext import commands
 
 class IAGREEWITHMYHUSBAND(commands.Bot):
