@@ -1,4 +1,5 @@
 import discord, inspect, io, textwrap, traceback, os
+from contextlib import redirect_stdout
 from discord.ext import commands
 
 class IAGREEWITHMYHUSBAND(commands.Bot):
