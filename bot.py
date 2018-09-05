@@ -22,6 +22,14 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
     async def on_ready(self):
         print("ready")
 
+    @commands.command()
+    async def purge(self, ctx, messages: int, contains: str=None):
+        await ctx.message.delete()
+        async for message in ctx.channel.history(limit=messages):
+            if contains in message.content or not contains:
+                await message.delete()
+        await ctx.send(f"Deleted {messages} messages. 👍")
+
     @commands.command(pass_context=True, hidden=True, name='eval')
     async def _eval(self, ctx, *, body: str, edit=False):
         """Evaluates python code"""
