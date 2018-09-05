@@ -24,14 +24,17 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
 
     @commands.command()
     async def purge(self, ctx, messages: int, contains: str=None):
+        counter = 0
         await ctx.message.delete()
         async for message in ctx.channel.history(limit=messages):
             if contains:
                 if contains in message.content:
                     await message.delete()
+                    counter += 1
             else:
                 await message.delete()
-        await ctx.send(f"Deleted {messages} messages. 👍")
+                counter += 1
+        await ctx.send(f"Deleted {counter} messages. 👍")
 
     @commands.command(pass_context=True, hidden=True, name='eval')
     async def _eval(self, ctx, *, body: str, edit=False):
