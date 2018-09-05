@@ -26,7 +26,10 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
     async def purge(self, ctx, messages: int, contains: str=None):
         await ctx.message.delete()
         async for message in ctx.channel.history(limit=messages):
-            if contains in message.content or not contains:
+            if contains:
+                if contains in message.content:
+                    await message.delete()
+            else:
                 await message.delete()
         await ctx.send(f"Deleted {messages} messages. 👍")
 
