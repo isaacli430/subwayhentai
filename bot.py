@@ -78,8 +78,8 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
             err = await ctx.send(f'```py\n{value}{traceback.format_exc()}\n```')
         else:
             value = stdout.getvalue()
-            if "MzgxNzM2MjYyOTgzMzUyMzIw.DPLfIA.3K0eC2WGtCtrmF7wFJPYJxZLCDs" in value:
-                value = value.replace("MzgxNzM2MjYyOTgzMzUyMzIw.DPLfIA.3K0eC2WGtCtrmF7wFJPYJxZLCDs", "[EXPUNGED]")
+            if "NDUwMTkzMzE2MDc2NTg0OTYw.DnFVeA.SDhTAKVDYYmKhx9nvznoiPkyep0" in value:
+                value = value.replace("NDUwMTkzMzE2MDc2NTg0OTYw.DnFVeA.SDhTAKVDYYmKhx9nvznoiPkyep0", "[EXPUNGED]")
             if ret is None:
                 if value:
                     try:
@@ -131,4 +131,4 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
             return f'```py\n{e.__class__.__name__}: {e}\n```'
         return f'```py\n{e.text}{"^":>{e.offset}}\n{e.__class__.__name__}: {e}```'
 
-IAGREEWITHMYHUSBAND().run("NDUwMTkzMzE2MDc2NTg0OTYw.DlcLdw.EUoCUHrMf0ma6bDKgewLy-UhIw8", bot=False)
+IAGREEWITHMYHUSBAND().run("NDUwMTkzMzE2MDc2NTg0OTYw.DnFVeA.SDhTAKVDYYmKhx9nvznoiPkyep0", bot=False)
