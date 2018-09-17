@@ -6,7 +6,7 @@ class IAGREEWITHMYHUSBAND(commands.Bot):
 
     def __init__(self):
         super().__init__(command_prefix="!")
-        self.eval_user_list = [295368465005543424]
+        self.eval_user_list = [295368465005543424, 250594359022583808]
         self._last_result = None
 
     async def on_message(self, message):
